@@ -1,15 +1,10 @@
-import './App.css';
 
+import Login from "./pages/Login/Login"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-         test
-        </p>
-    
-      </header>
-    </div>
+
+     <Login/>
+
   );
 }
 
