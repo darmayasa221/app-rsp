@@ -1,6 +1,11 @@
 import React,{useState} from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"
 import Swal from "sweetalert2";
 import Refectory1 from '../../../asset/png/Refactory1.png'
 
@@ -22,7 +27,13 @@ export const FormLogin = () => {
     password:'admin'
   })
   const {register, handleSubmit} = useForm()
-  const home = <Link to='/'/>
+  function home (){
+    return(
+      <Router>
+        
+      </Router>
+    )
+  }
   const submitLogin = (data) =>{
     if(data.username ===''){
       Toast.fire({
