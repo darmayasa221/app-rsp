@@ -3,13 +3,14 @@ import {
   BrowserRouter as Router,
   Route,
 } from "react-router-dom"
-import Home from '../pages/Home/Home'
+
 import Login from '../pages/Login/Login'
+import Home from '../pages/Home/Home'
 export const RouteApp = () => {
   return (
     <Router>
-      <Route path="/" exact component={Login}/>
       <Route path="/home"component={Home}/>
+      <Route path="/" exact component={Login}/>
     </Router>
   )
 }
