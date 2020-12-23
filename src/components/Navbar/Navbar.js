@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom"
 import Refactory1 from '../../asset/png/Refactory1.png'
@@ -10,15 +8,15 @@ import "./Navbar.css"
 
 
 export const Navbar = () => {
-  const [state, setState] = useState({slideDownL:true})
+  const [state, setState] = useState({slideDown:true})
   const down = (data) =>{
-    if(state.slideDownL){
-      setState({slideDownL:false})
+    if(state.slideDown){
+      setState({slideDown:false})
     }else{
-      setState({slideDownL:true})
+      setState({slideDown:true})
     }
   }
-  const slide = state.slideDownL? "" : "down"
+  const slide = state.slideDown? "" : "down"
   return (
     <Router>
         <nav className="nav">

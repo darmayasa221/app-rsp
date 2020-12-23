@@ -17,7 +17,7 @@ const Login = () => {
   return (
     <div className="App">
        <div className="login">
-        <div className="container" >
+        <div className="container-login" >
           {state.isLoginActive && (
           <FormLogin/>
           )}

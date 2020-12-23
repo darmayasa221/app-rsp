@@ -1,13 +1,9 @@
 import React,{useState} from 'react'
 import { useForm } from 'react-hook-form'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom"
+import { useHistory } from 'react-router-dom';
 import Swal from "sweetalert2";
 import Refectory1 from '../../../asset/png/Refactory1.png'
+
 
 const Toast =  Swal.mixin({
   toast: true,
@@ -26,14 +22,8 @@ export const FormLogin = () => {
     username:'admin',
     password:'admin'
   })
-  const {register, handleSubmit} = useForm()
-  function home (){
-    return(
-      <Router>
-        
-      </Router>
-    )
-  }
+  const {register, handleSubmit} = useForm()  
+  const sccs = useHistory()
   const submitLogin = (data) =>{
     if(data.username ===''){
       Toast.fire({
@@ -62,9 +52,12 @@ export const FormLogin = () => {
         showConfirmButton:false,
         timer:1000
       })
-      return home
+      setTimeout(() => {
+        sccs.push('/home')
+      }, 1000);
     }
   }
+
  
   return (
     <div className="base-container"> 
@@ -78,6 +71,7 @@ export const FormLogin = () => {
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input 
+            title="username"
             type="text" 
             name="username" 
             placeholder="username"
@@ -86,6 +80,7 @@ export const FormLogin = () => {
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input 
+            title="password"
             autoComplete="password" 
             type="password" 
             name="password" 
@@ -94,7 +89,7 @@ export const FormLogin = () => {
           </div>
         </div>
         <div className="footer">
-          <button className="button" type="submit">
+          <button title="sub" className="button" type="submit">
             Login
           </button>
         </div>

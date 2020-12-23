@@ -1,11 +1,8 @@
-import { Navbar } from "./components/Navbar/Navbar";
+import { RouteApp } from "./route/RouteApp";
 
-// import Login from "./pages/Login/Login"
 function App() {
   return (
-    <Navbar/>
-    //  <Login/>
-
+   <RouteApp/>
   );
 }
 

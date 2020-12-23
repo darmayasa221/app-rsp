@@ -26,11 +26,11 @@ nav ul {
 }
 
 nav ul .a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
-nav ul .a:hover {
+nav ul .a li:hover {
   color: rgb(207, 169, 66);
 }
 
@@ -47,6 +47,7 @@ nav ul .a:hover {
 @media screen and (max-width: 920px) {
 
   .menu-toggle {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     height: 20px;
@@ -62,12 +63,14 @@ nav ul .a:hover {
   }
 
   nav img {
+    padding-left: 10px;
     width: 100px;
+    z-index: 2;
   }
 
   nav {
     justify-content: space-between;
-    padding: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
     height: 80px;
   }
 
@@ -77,12 +80,13 @@ nav ul .a:hover {
     left: 0;
     top: 0;
     flex-direction: column;
-    background-color: transparent;
-    height: 34%;
+    background-color: rgba(4, 53, 93, 0.252);
+    /* height: 58%; */
     justify-content: space-evenly;
-    z-index: -1;
+    z-index: 1;
     width: 100%;
     transform: translateY(-100%);
+
   }
 
   nav ul.down {
